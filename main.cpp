@@ -153,6 +153,7 @@ void Game::set_comp_pos(Player& P){
   cout<<"Thinking...\n";
   Sleep(1800);
 
+static int counter;
 //place computers symbol in between opponent's symbol (X   O   X)
     if((c[0].symbol ==' ' || c[1].symbol == ' ' || c[2].symbol == ' ') && (((c[0].symbol == c[2].symbol) && c[0].symbol != ' ') || ((c[0].symbol == c[1].symbol) && (c[0].symbol != ' ')) || ((c[1].symbol == c[2].symbol) && c[1].symbol!=' '))){
        if(c[0].symbol == ' '){
@@ -376,6 +377,21 @@ void Game::set_comp_pos(Player& P){
           }
         }
      }
+     //move against corner input by opponent
+     else if((c[0].symbol != ' ' && c[1].symbol == ' ' || c[6].symbol != ' ' && c[7].symbol == ' ') && counter == 0){
+       if(c[0].symbol != ' ' && c[1].symbol == ' '){
+         c[1].symbol = P.symbol;
+       }
+       
+       else if(c[6].symbol != ' ' && c[7].symbol == ' '){
+         c[7].symbol = P.symbol;
+       }
+       
+       else{
+         cout<<"HEll\n";
+         Sleep(1800);
+       }
+     }
    else{
        
        //target bottom left corner
@@ -570,7 +586,7 @@ if(!is_comp){
 
    }
 
-//only take the players detail is game mode is multiplayer
+//only take the players detail if game mode is multiplayer
     else
     {
         cout<<"Enter Player2 Name\n";
