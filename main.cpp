@@ -78,7 +78,7 @@ void Game::displayGraphics(Player& p1,Player& p2){
 
 //Take input for position 
     if(!curr_player.is_comp){
-    cout<<curr_player.name<<" Choose position (1-9)"<<'\n';
+    cout<<curr_player.name<<" ( "<<(curr_player.symbol)<<" )"<<" Choose position (1-9)"<<'\n';
     int choice;
     cin>>choice;
     //check for range input by the user
@@ -539,7 +539,7 @@ if(!is_comp){
     cout<<"Enter Player1 Name\n";
     //cin doesn't take characters after space
     cin>>name;
-      cout<<"Choose a symbol 'X' or 'O'\n";
+      cout<<"Choose a symbol 'X' or 'O',X will be the first Player"<<'\n';
     char ch = getch();
     if(ch == 'X'||ch == 'x')
     {
@@ -644,6 +644,7 @@ int main(){
       //one player is computer
         p2.make_comp();
     }
+    system("CLS");
     G.input(p1,p2);
     return 0;
 }
