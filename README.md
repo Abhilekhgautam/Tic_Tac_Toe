@@ -5,7 +5,7 @@ Source Code for a terminal based Tic Tac Toe made in C++. This Game supports the
 Players are prompt to choose the Game mode , that is , single player and multiplayer along with their desired symbol (x or o).The player with X plays first.
 
 The monitor shows 9 empty spaces where users can input their desired Position. The player already have their respective symbols, so their symbol gets displayed after the input.\
-Player with recurrent symbols (horizontally,vertically or diagonally) wins.
+Player with 3 continous symbols (horizontally,vertically or diagonally) wins.
 If no result can be concluded the game is draw.
 
 # Things to adjust
