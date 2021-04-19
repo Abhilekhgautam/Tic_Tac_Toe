@@ -18,7 +18,7 @@ After you clone this repository,
 Go to the current directory
 
 ```
-cd tictactoe  
+cd Tic_Tac_Toe  
 g++ main.cpp -o main.exe  
 main.exe
 ```
