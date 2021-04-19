@@ -153,7 +153,6 @@ void Game::set_comp_pos(Player& P){
   cout<<"Thinking...\n";
   Sleep(1800);
 
-static int counter;
 //place computers symbol in between opponent's symbol (X   O   X)
     if((c[0].symbol ==' ' || c[1].symbol == ' ' || c[2].symbol == ' ') && (((c[0].symbol == c[2].symbol) && c[0].symbol != ' ') || ((c[0].symbol == c[1].symbol) && (c[0].symbol != ' ')) || ((c[1].symbol == c[2].symbol) && c[1].symbol!=' '))){
        if(c[0].symbol == ' '){
@@ -378,19 +377,25 @@ static int counter;
         }
      }
      //move against corner input by opponent
-     else if((c[0].symbol != ' ' && c[1].symbol == ' ' || c[6].symbol != ' ' && c[7].symbol == ' ') && counter == 0){
-       if(c[0].symbol != ' ' && c[1].symbol == ' '){
-         c[1].symbol = P.symbol;
+     else if((c[0].symbol != ' ' && c[4].symbol == ' ' || c[6].symbol != ' ' && c[4].symbol == ' ')){
+       if(c[0].symbol != ' ' && c[4].symbol == ' '){
+         c[4].symbol = P.symbol;
        }
        
-       else if(c[6].symbol != ' ' && c[7].symbol == ' '){
-         c[7].symbol = P.symbol;
+       else if(c[6].symbol != ' ' && c[4].symbol == ' '){
+         c[4].symbol = P.symbol;
        }
        
-       else{
-         cout<<"HEll\n";
-         Sleep(1800);
+     }
+     else if((c[0].symbol != ' ' && c[4].symbol != ' ' && c[3].symbol == ' '|| c[6].symbol != ' ' && c[4].symbol != ' ' && c[3].symbol ==' ')){
+       if(c[0].symbol != ' ' && c[4].symbol != ' '){
+         c[3].symbol = P.symbol;
        }
+       
+       else if(c[6].symbol != ' ' && c[4].symbol != ' '){
+         c[3].symbol = P.symbol;
+       }
+       
      }
    else{
        
@@ -643,24 +648,24 @@ int Game::play_count;
 
 
 int main(){
-     Game G;
-     G.display();
-    int choice;
-    cout<<"Select Game Mode\n";
-    cout<<"1.Single Player(vs Com)\n";
-    cout<<"2.Multiplayer\n";
-    cin>>choice;
+  Game G;
+  G.display();
+  int choice;
+  cout<<"Select Game Mode\n";
+  cout<<"1.Single Player(vs Com)\n";
+  cout<<"2.Multiplayer\n";
+  cin>>choice;
     //Force the choice among 1 and 2
-    while(choice!=1 && choice!=2){
-        cout<<"Choose In Between 1 and 2\n";
-        cin>>choice;
-    }
-    Player p1,p2;
-    if(choice == 1){
+  while(choice!=1 && choice!=2){
+    cout<<"Choose In Between 1 and 2\n";
+    cin>>choice;
+  }
+  Player p1,p2;
+  if(choice == 1){
       //one player is computer
-        p2.make_comp();
-    }
-    system("CLS");
-    G.input(p1,p2);
-    return 0;
+    p2.make_comp();
+  }
+  system("CLS");
+  G.input(p1,p2);
+return 0;
 }
