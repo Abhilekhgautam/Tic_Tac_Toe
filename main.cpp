@@ -19,7 +19,7 @@ struct Coordinates{
 class Player;
 class Game{
     static Coordinates c[9];
-    //store how many time players position was taken
+    //store how many time players position was taken as input
     static int play_count;
     public:
     void set_comp_pos(Player&);
