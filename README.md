@@ -17,10 +17,18 @@ Although the program runs, Single player mode still demands more, the moves are 
 After you clone this repository,
 Go to the current directory
 
+For Windows
 ```
 cd Tic_Tac_Toe  
 g++ main.cpp -o main.exe  
 main.exe
+```
+For Linux
+```
+cd Tic_Tac_Toe
+g++ main.cpp -o main
+./main
+ 
 ```
 
 The output is then visible in your screen
