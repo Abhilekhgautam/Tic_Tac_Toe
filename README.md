@@ -1,5 +1,5 @@
 # Tic_Tac_Toe
-Source Code for a terminal based Tic Tac Toe made in C++. This Game supports the feature of both Multiplayer and single Player Game Mode.
+Source Code for a terminal based Tic Tac Toe written in C++. This Game supports the feature of both Multiplayer and single Player Game Mode.
 
 # Rules of Game
 Players are prompt to choose the Game mode , that is , single player and multiplayer along with their desired symbol (x or o).The player with X plays first.
