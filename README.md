@@ -8,6 +8,9 @@ The monitor shows 9 empty spaces where users can input their desired Position. T
 Player with 3 continous symbols (horizontally,vertically or diagonally) wins.
 If no result can be concluded the game is draw.
 
+# Compatibilty
+Since the program contains platform specific header, this program only runs in the Windows Platform
+
 # Things to adjust
 
 Although the program runs, Single player mode still demands more, the moves are repetitive for the computer and sometimes it makes stupid decisions which can be improved.
@@ -23,12 +26,6 @@ cd Tic_Tac_Toe
 g++ main.cpp -o main.exe  
 main.exe
 ```
-For Linux
-```
-cd Tic_Tac_Toe
-g++ main.cpp -o main
-./main
- 
-```
+
 
 The output is then visible in your screen
